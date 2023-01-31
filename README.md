@@ -21,6 +21,37 @@ The input of this stage is a similarity feature vector of two methods and the ou
 
 The source code and dataset of Tritor will be published here after the paper is accepted.
 
+# Project Structure  
+  
+```shell  
+Amain  
+|-- AST_Generation_and_Enhancement.py     	// implement the AST Generation and Enhancement phase  
+|-- Triads_Extraction_and_Feature_Extraction.py     // implement the first two phases:  Triads_Extraction and Feature_Extraction
+|-- Classification.py   // implement the Classification phase  
+```
+
+### AST_Generation_and_Enhancement.py
+- Input: dataset with source codes
+- Output: semantically enhanced AST of source codes 
+```
+python AST_Generation_and_Enhancement.py
+```
+
+### Triads_Extraction_and_Feature_Extraction.py
+- Input: semantically enhanced AST of source codes
+- Output: feature vectors of code pairs 
+```
+python Triads_Extraction_and_Feature_Extraction.py
+```
+
+### Classification.py
+- Input: feature vectors of dataset
+- Output: recall, precision, and F1 scores of machine learning algorithms
+```
+python Classification.py
+```
+
+
 # Parameter details of our comparative tools
 |Tool            |Parameters                     |
 |----------------|-------------------------------|
