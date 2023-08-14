@@ -62,16 +62,30 @@ python Classification.py
 |SCDetector      |distance measure: Cosine distance, dimension of token vector: 100, threshold: 0.5, learning rate: 0.0001 |
 |DeepSim      |Layers size: 88-6, (128x6-256-64)-128-32, epoch: 4, Initial learning rate: 0.001, $\lambda$ for L2 regularization: 0.00003, Dropout: 0.75 |
 |CDLH      |Code length 32 for learned binary hash codes, size of word embeddings: 100 |
-|TBCNN      |Convolutional layer dim size: 300，dropout rate: 0.5, batch size: 10 |
+|TBCNN      |Convolutional layer dim size: 300， dropout rate: 0.5, batch size: 10 |
 |FCCA      |Size of hidden states: 128(Text), 128(AST), embedding size: 300(Text), 300(AST), 64(CFG) clipping gradient range: (-1.2，1.2), epoch: 50, initial learning rate: 0.0005, dropout:0.6, batchsize: 32|
 
 
+# Descriptions of used metrics in experiments
+|Metrics|  Abbr|  Definition|
+|----------------|-------------------------------|-----------------------|
+|True Positive    |TP   |#samples correctly classified as clone pairs |
+|True Negative    |TN   |#samples correctly classified as non-clone pairs  |
+|False Positive   |FP   |#samples incorrectly classified as clone pairs |
+|False Negative   |FN   |#samples incorrectly classified as non-clone pairs |
+|Precision        |P    | TP/(TP+FP) |
+|Recall           |R    | TP/(TP+FN) |
+|F-measure        |F1   | 2*P*R/(P+R)|
+
 
 # RQ: Sensitivity
-In the previous subsection we used a balanced test set (i.e., equal number of cloned pairs and non-cloned pairs) to measure the effectiveness of Tritor and to compare it with our baseline. 
+In the previous subsection, we used a balanced test set (i.e., equal number of cloned pairs and non-cloned pairs) to measure the effectiveness of Tritor and to compare it with our baseline. 
 However, the project codes to be detected in real life do not follow this balance exactly. 
 Therefore, as the ratio of test set clone pairs to non-clone pairs varies in practice, there may be inconsistencies with the detection performance reported above. 
-Consequently, in this section, we investigate the sensitivity of Tritor by conducting experiments on seven test sets with different ratios from the BCB dataset, with the training set as well as the saved models are consistent.
+Consequently, in this section, we investigate the sensitivity of Tritor by conducting experiments on seven test sets with different ratios from the BCB dataset, with the training set as well as the saved models consistent.
+The overall size of the test set is 27,000 cloned pairs with 27,000 non-cloned pairs (one-tenth of the full dataset). 
+Seven different sets are constructed by censoring the number of clone pairs or non-clone pairs. 
+For example, a randomly selected quarter of the test set (i.e., 6,750) clone pairs plus all of the non-clone pairs in the test set construct a set with a 1:4 ratio of clone pairs to non-clone pairs.
 
 ![the F1 scores, precision and recall for seven test sets with the ratio of clone to non-clone pairs ranging from 4:1 to 1:4](https://github.com/TritorCodes/Tritor/blob/main/img-storage/Proportion.png)
 
