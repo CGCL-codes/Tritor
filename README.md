@@ -167,3 +167,21 @@ The vast majority of node types have occurrences that differ by no more than 1 b
 There are only a few node types that have larger deviations but these do not exceed 2 and are within a reasonable range of fluctuation.
 
 The two above-mentioned evidences show that the importance of the features we extracted have similar importance on BCB and GCJ dataset, indicating that our method has universal applicability and can be applied to different datasets.
+
+
+# Publication
+Deqing Zou, Siyue Feng, Yueming Wu, Wenqi Suo, and Hai Jin. 2023. Tritor: Detecting Semantic Code Clones by Building Social Network-Based Triads Model. In Proceedings of the 31st ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE ’23), December 3–9, 2023, San Francisco, CA, USA. ACM, New York, NY, USA, 13 pages. 
+https://doi.org/10.1145/3611643.3616354
+
+If you use our dataset or source code, please kindly cite our paper:
+```
+@INPROCEEDINGS{amain2022,
+  author={Zou, Deqing and Feng, Siyue and Wu, Yueming and Suo, Wenqi and Jin, Hai},
+  booktitle={2023 ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)}, 
+  title={Tritor: Detecting Semantic Code Clones by Building Social Network-Based Triads Model}, 
+  year={2023},
+  doi={10.1145/3611643.3616354}}
+```
+
+# Support or Contact
+Tritor is developed in the National Engineering Research Center for Big Data Technology and System, Services Computing Technology and System Lab, Hubei Key Laboratory of Distributed System Security, Hubei Engineering Research Center on Big Data Security, Cluster and Grid Computing Lab, Huazhong University of Science and Technology, Wuhan, China by Deqing Zou (deqingzou@hust.edu.cn), Siyue Feng (fengsiyue@hust.edu.cn), Yueming Wu (wuyueming21@gmail.com), Wenqi Suo (suowenqi@hust.edu.cn), and Hai Jin (hjin@hust.edu.cn).
