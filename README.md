@@ -175,7 +175,7 @@ https://doi.org/10.1145/3611643.3616354
 
 If you use our dataset or source code, please kindly cite our paper:
 ```
-@INPROCEEDINGS{amain2022,
+@INPROCEEDINGS{tritor2023,
   author={Zou, Deqing and Feng, Siyue and Wu, Yueming and Suo, Wenqi and Jin, Hai},
   booktitle={2023 ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)}, 
   title={Tritor: Detecting Semantic Code Clones by Building Social Network-Based Triads Model}, 
